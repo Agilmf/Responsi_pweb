@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jasa Servis Elektronik</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#pesanan">Pesanan</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <h1>Jasa Servis Elektronik</h1>
+    <div id="produk">
+        <h2>Jenis-jenis Elektronik Tersedia:</h2>
+        <ul>
+            <li>
+                <img src="tv.jpg" alt="TV">
+                <span>TV</span>
+            </li>
+            <li>
+                <img src="kulkas.jpg" alt="Kulkas">
+                <span>Kulkas</span>
+            </li>
+            <li>
+                <img src="ac.jpg" alt="AC">
+                <span>AC</span>
+            </li>
+            <li>
+                <img src="leptop.jpg" alt="Laptop">
+                <span>Laptop</span>
+            </li>
+            <li>
+                <img src="handphone.jpg" alt="Handphone">
+                <span>Handphone</span>
+            </li>
+        </ul>
+    </div>
+    <div id="pesanan">
+        <h2>Pesanan Pelanggan</h2>
+        <form id="form-pesanan" action="proses_pesanan.php" method="post">
+            <label for="nama">Nama Pelanggan:</label>
+            <input type="text" id="nama" name="nama" required>
+            <label for="jenis-elektronik">Jenis Elektronik:</label>
+            <select id="jenis-elektronik" name="jenis-elektronik" required>
+                <option value="">Pilih jenis elektronik</option>
+                <option value="TV">TV</option>
+                <option value="Kulkas">Kulkas</option>
+                <option value="AC">AC</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Handphone">Handphone</option>
+            </select>
+            <label for="barang">Keterangan:</label>
+            <input type="text" id="Keterangan" name="Keterangan" required>
+            <button type="submit">Pesan</button>
+        </form>
+        <div id="feedback" style="display: none;"></div>
+    </div>
+   <div id="kontak">
+    <h2>Kontak</h2>
+    <div class="contact-info">
+        <div class="contact-item">
+            <span>081238496032</span>
+        </div>
+        <div class="contact-item">
+            <span>agilmfthl@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <span>Jalan garuda No. 123, yogyakarta</span>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2023 Jasa Servis Elektronik/Agil Mfthl. All rights reserved.</p>
+    </footer>
+
+     <script>
+        // Memanggil fungsi displayFeedback saat halaman dimuat
+        window.onload = function() {
+            displayFeedback();
+        };
+    </script>
+</body>
+</html>
